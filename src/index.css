@@ -6,9 +6,9 @@
 
 @font-face {
   font-family: 'Satoshi-Light';
-  src: url('../Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Light.woff2') format('woff2'),
-    url('../Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Light.woff') format('woff'),
-    url('../Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Light.ttf') format('truetype');
+  src: url('/fonts/satoshi/Satoshi-Light.woff2') format('woff2'),
+    url('/fonts/satoshi/Satoshi-Light.woff') format('woff'),
+    url('/fonts/satoshi/Satoshi-Light.ttf') format('truetype');
   font-weight: 300;
   font-display: swap;
   font-style: normal;
@@ -16,9 +16,9 @@
 
 @font-face {
   font-family: 'Satoshi-LightItalic';
-  src: url('../Satoshi_Complete/Fonts/WEB/fonts/Satoshi-LightItalic.woff2') format('woff2'),
-    url('../Satoshi_Complete/Fonts/WEB/fonts/Satoshi-LightItalic.woff') format('woff'),
-    url('../Satoshi_Complete/Fonts/WEB/fonts/Satoshi-LightItalic.ttf') format('truetype');
+  src: url('/fonts/satoshi/Satoshi-LightItalic.woff2') format('woff2'),
+    url('/fonts/satoshi/Satoshi-LightItalic.woff') format('woff'),
+    url('/fonts/satoshi/Satoshi-LightItalic.ttf') format('truetype');
   font-weight: 300;
   font-display: swap;
   font-style: italic;
@@ -26,9 +26,9 @@
 
 @font-face {
   font-family: 'Satoshi-Regular';
-  src: url('../Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Regular.woff2') format('woff2'),
-    url('../Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Regular.woff') format('woff'),
-    url('../Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Regular.ttf') format('truetype');
+  src: url('/fonts/satoshi/Satoshi-Regular.woff2') format('woff2'),
+    url('/fonts/satoshi/Satoshi-Regular.woff') format('woff'),
+    url('/fonts/satoshi/Satoshi-Regular.ttf') format('truetype');
   font-weight: 400;
   font-display: swap;
   font-style: normal;
@@ -36,9 +36,9 @@
 
 @font-face {
   font-family: 'Satoshi-Italic';
-  src: url('../Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Italic.woff2') format('woff2'),
-    url('../Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Italic.woff') format('woff'),
-    url('../Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Italic.ttf') format('truetype');
+  src: url('/fonts/satoshi/Satoshi-Italic.woff2') format('woff2'),
+    url('/fonts/satoshi/Satoshi-Italic.woff') format('woff'),
+    url('/fonts/satoshi/Satoshi-Italic.ttf') format('truetype');
   font-weight: 400;
   font-display: swap;
   font-style: italic;
@@ -46,9 +46,9 @@
 
 @font-face {
   font-family: 'Satoshi-Medium';
-  src: url('../Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Medium.woff2') format('woff2'),
-    url('../Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Medium.woff') format('woff'),
-    url('../Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Medium.ttf') format('truetype');
+  src: url('/fonts/satoshi/Satoshi-Medium.woff2') format('woff2'),
+    url('/fonts/satoshi/Satoshi-Medium.woff') format('woff'),
+    url('/fonts/satoshi/Satoshi-Medium.ttf') format('truetype');
   font-weight: 500;
   font-display: swap;
   font-style: normal;
@@ -56,9 +56,9 @@
 
 @font-face {
   font-family: 'Satoshi-MediumItalic';
-  src: url('../Satoshi_Complete/Fonts/WEB/fonts/Satoshi-MediumItalic.woff2') format('woff2'),
-    url('../Satoshi_Complete/Fonts/WEB/fonts/Satoshi-MediumItalic.woff') format('woff'),
-    url('../Satoshi_Complete/Fonts/WEB/fonts/Satoshi-MediumItalic.ttf') format('truetype');
+  src: url('/fonts/satoshi/Satoshi-MediumItalic.woff2') format('woff2'),
+    url('/fonts/satoshi/Satoshi-MediumItalic.woff') format('woff'),
+    url('/fonts/satoshi/Satoshi-MediumItalic.ttf') format('truetype');
   font-weight: 500;
   font-display: swap;
   font-style: italic;
@@ -66,9 +66,9 @@
 
 @font-face {
   font-family: 'Satoshi-Bold';
-  src: url('../Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Bold.woff2') format('woff2'),
-    url('../Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Bold.woff') format('woff'),
-    url('../Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Bold.ttf') format('truetype');
+  src: url('/fonts/satoshi/Satoshi-Bold.woff2') format('woff2'),
+    url('/fonts/satoshi/Satoshi-Bold.woff') format('woff'),
+    url('/fonts/satoshi/Satoshi-Bold.ttf') format('truetype');
   font-weight: 700;
   font-display: swap;
   font-style: normal;
@@ -76,9 +76,9 @@
 
 @font-face {
   font-family: 'Satoshi-BoldItalic';
-  src: url('../Satoshi_Complete/Fonts/WEB/fonts/Satoshi-BoldItalic.woff2') format('woff2'),
-    url('../Satoshi_Complete/Fonts/WEB/fonts/Satoshi-BoldItalic.woff') format('woff'),
-    url('../Satoshi_Complete/Fonts/WEB/fonts/Satoshi-BoldItalic.ttf') format('truetype');
+  src: url('/fonts/satoshi/Satoshi-BoldItalic.woff2') format('woff2'),
+    url('/fonts/satoshi/Satoshi-BoldItalic.woff') format('woff'),
+    url('/fonts/satoshi/Satoshi-BoldItalic.ttf') format('truetype');
   font-weight: 700;
   font-display: swap;
   font-style: italic;
@@ -86,9 +86,9 @@
 
 @font-face {
   font-family: 'Satoshi-Black';
-  src: url('../Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Black.woff2') format('woff2'),
-    url('../Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Black.woff') format('woff'),
-    url('../Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Black.ttf') format('truetype');
+  src: url('/fonts/satoshi/Satoshi-Black.woff2') format('woff2'),
+    url('/fonts/satoshi/Satoshi-Black.woff') format('woff'),
+    url('/fonts/satoshi/Satoshi-Black.ttf') format('truetype');
   font-weight: 900;
   font-display: swap;
   font-style: normal;
@@ -96,9 +96,9 @@
 
 @font-face {
   font-family: 'Satoshi-BlackItalic';
-  src: url('../Satoshi_Complete/Fonts/WEB/fonts/Satoshi-BlackItalic.woff2') format('woff2'),
-    url('../Satoshi_Complete/Fonts/WEB/fonts/Satoshi-BlackItalic.woff') format('woff'),
-    url('../Satoshi_Complete/Fonts/WEB/fonts/Satoshi-BlackItalic.ttf') format('truetype');
+  src: url('/fonts/satoshi/Satoshi-BlackItalic.woff2') format('woff2'),
+    url('/fonts/satoshi/Satoshi-BlackItalic.woff') format('woff'),
+    url('/fonts/satoshi/Satoshi-BlackItalic.ttf') format('truetype');
   font-weight: 900;
   font-display: swap;
   font-style: italic;
@@ -106,9 +106,9 @@
 
 @font-face {
   font-family: 'Satoshi-Variable';
-  src: url('../Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Variable.woff2') format('woff2'),
-    url('../Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Variable.woff') format('woff'),
-    url('../Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Variable.ttf') format('truetype');
+  src: url('/fonts/satoshi/Satoshi-Variable.woff2') format('woff2'),
+    url('/fonts/satoshi/Satoshi-Variable.woff') format('woff'),
+    url('/fonts/satoshi/Satoshi-Variable.ttf') format('truetype');
   font-weight: 300 900;
   font-display: swap;
   font-style: normal;
@@ -116,9 +116,9 @@
 
 @font-face {
   font-family: 'Satoshi-VariableItalic';
-  src: url('../Satoshi_Complete/Fonts/WEB/fonts/Satoshi-VariableItalic.woff2') format('woff2'),
-    url('../Satoshi_Complete/Fonts/WEB/fonts/Satoshi-VariableItalic.woff') format('woff'),
-    url('../Satoshi_Complete/Fonts/WEB/fonts/Satoshi-VariableItalic.ttf') format('truetype');
+  src: url('/fonts/satoshi/Satoshi-VariableItalic.woff2') format('woff2'),
+    url('/fonts/satoshi/Satoshi-VariableItalic.woff') format('woff'),
+    url('/fonts/satoshi/Satoshi-VariableItalic.ttf') format('truetype');
   font-weight: 300 900;
   font-display: swap;
   font-style: italic;
@@ -160,7 +160,7 @@
   --pearl-hover: #EFEFE9;
   --black: #0D0D0D;
   --black-hover: #1A1A1A;
-  
+
   /* Opacity Variants */
   --black-5: rgba(13, 13, 13, 0.05);
   --black-10: rgba(13, 13, 13, 0.1);
@@ -189,9 +189,12 @@
   --warning: #F59E0B;
 
   /* Log Status Tokens - Spectrum Accents */
-  --log-success: #673AB7; /* Deep Purple */
-  --log-failure: #FF007F; /* Neon Pink */
-  --log-transit: #56ced2; /* Electric Cyan */
+  --log-success: #673AB7;
+  /* Deep Purple */
+  --log-failure: #FF007F;
+  /* Neon Pink */
+  --log-transit: #56ced2;
+  /* Electric Cyan */
 
   /* Dotted Grid Pattern - strictly following the theme */
   --dot-color: rgba(13, 13, 13, 0.03);
@@ -291,9 +294,24 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-sans);
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari and Opera */
   }
 
   html {
     @apply font-sans antialiased;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  html::-webkit-scrollbar {
+    display: none;
   }
 }
