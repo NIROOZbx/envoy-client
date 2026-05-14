@@ -1,0 +1,16 @@
+# Logs
+logs
+*.log
+
+
+node_modules
+dist
+dist-ssr
+*.local
+.env
+*.tsbuildinfo
+Satoshi_Complete
+
+# AI Agent state
+.agents/
+
