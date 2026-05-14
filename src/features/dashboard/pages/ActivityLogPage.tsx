@@ -1,9 +1,9 @@
 import React from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { useActivityLogs } from '../hooks/useActivityLogs';
-import { LogFilters } from '../components/logs/LogFilters';
-import { LogTable } from '../components/logs/LogTable';
-import { LogPagination } from '../components/logs/LogPagination';
+import { LogFilters } from '@/features/dashboard/components/logs/LogFilters';
+import { LogTable } from '@/features/dashboard/components/logs/LogTable';
+import { LogPagination } from '@/features/dashboard/components/logs/LogPagination';
 import { HeaderSkeleton, TableSkeleton } from '@/components/ui';
 
 export const ActivityLogPage: React.FC = () => {
