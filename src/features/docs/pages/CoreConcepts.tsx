@@ -1,5 +1,4 @@
 import React from 'react';
-import { Callout } from '../components/DocsContent';
 
 const ConceptBlock = ({ title, id, children }: any) => (
   <section className="space-y-4" id={id}>

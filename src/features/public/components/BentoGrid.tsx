@@ -21,7 +21,7 @@ const BentoCard: React.FC<BentoCardProps> = ({ title, description, className, ch
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     className={cn(
-      "relative overflow-hidden rounded-[32px] border border-(--black-5) bg-(--ui-bg) p-8 md:p-10 transition-all hover:bg-white hover:shadow-2xl hover:shadow-(--black-5) group",
+      "relative overflow-hidden rounded-[32px] border border-(--black-5) bg-(--ui-bg) p-8 md:p-10 transition-all hover:bg-white hover:shadow-2xl  group",
       className
     )}
   >

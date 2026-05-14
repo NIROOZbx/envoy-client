@@ -72,7 +72,10 @@ export const PulseChartCard: React.FC<PulseChartCardProps> = ({ title, value, tr
         <div className="bg-white border border-ui-border rounded-[24px] p-6 sm:p-8 shadow-sm flex flex-col h-full relative overflow-hidden group">
             <div className="flex justify-between items-start z-10 relative">
                 <div className="space-y-1">
-                    <h3 className="text-[14px] font-bold text-ui-text tracking-tight">{title}</h3>
+                    <h3 className="text-[14px] font-bold text-ui-text tracking-tight flex items-center gap-2">
+                        {Icon && <Icon className="w-4 h-4 text-ui-muted" />}
+                        {title}
+                    </h3>
                     <p className="text-[11px] font-bold text-ui-muted opacity-40 leading-relaxed">
                         {tagline}
                     </p>

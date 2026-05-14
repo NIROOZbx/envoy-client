@@ -1,7 +1,6 @@
 import React from 'react';
 import { Send, MessageSquare, Hash, MessageCircle, Bell, Globe, Activity, TrendingUp } from 'lucide-react';
 import { UsageSparkline } from './UsageSparkline';
-import { cn } from '@/lib/utils';
 
 interface UsageCardProps {
     item: {

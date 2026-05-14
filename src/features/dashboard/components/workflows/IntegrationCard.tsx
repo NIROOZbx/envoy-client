@@ -1,12 +1,12 @@
 import React from 'react';
-import { MessageSquare, Folder, Link as LinkIcon, ExternalLink } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 
 interface IntegrationCardProps {
   eventType: string;
   updatedAt: string;
 }
 
-export const IntegrationCard: React.FC<IntegrationCardProps> = ({ eventType, updatedAt }) => {
+export const IntegrationCard: React.FC<IntegrationCardProps> = ({ eventType }) => {
   return (
     <div className="bg-white rounded-[24px] overflow-hidden shadow-lg border border-black/5 flex flex-col transition-all hover:-translate-y-1 hover:shadow-xl relative group">
       {/* Metallic Top Banner using root color system */}

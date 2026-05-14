@@ -41,7 +41,7 @@ const SidebarItem = ({ to, icon: Icon, label }: { to: string; icon: any; label: 
 );
 
 export const DashboardLayout: React.FC = () => {
-  const { user, logout, getMe } = useAuth();
+  const { user, logout } = useAuth();
   const { environments, activeEnvironmentId, setActiveEnvironment } = useAuthStore();
   const navigate = useNavigate();
   const location = useLocation();

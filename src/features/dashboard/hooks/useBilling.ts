@@ -7,7 +7,6 @@ import {
   getSubscription,
   getUsage,
   cancelSubscription,
-  type BillingPlan,
   type SubscriptionInfo,
   type UsageInfo,
 } from '../api/billing';

@@ -3,11 +3,11 @@ import { useOutletContext } from 'react-router-dom';
 import { BillingManager } from '../components/billing/BillingManager';
 import { useBilling } from '../hooks/useBilling';
 import { formatDate } from '@/lib/utils';
-import { Calendar, ShieldCheck } from 'lucide-react';
+import { Calendar } from 'lucide-react';
 
 export const BillingPage: React.FC = () => {
   const { environmentId } = useOutletContext<{ environmentId: string | null }>();
-  const { subscription, usage, isLoading } = useBilling();
+  const { subscription, usage } = useBilling();
 
   if (!environmentId) {
     return (

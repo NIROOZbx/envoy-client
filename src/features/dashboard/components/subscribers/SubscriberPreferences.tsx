@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSubscriberPreferences } from '../../hooks/useSubscribers';
-import { Loader2, Settings2, Bell, BellOff, Zap } from 'lucide-react';
+import {  Settings2, Bell, BellOff, Zap } from 'lucide-react';
 import { cn, formatDate } from '@/lib/utils';
 import { ACTIVE_CHANNELS } from '../../constants/channels';
 import { Skeleton } from '@/components/ui';

@@ -20,7 +20,6 @@ interface ResourceCardProps {
 }
 
 export const ResourceCard: React.FC<ResourceCardProps> = ({
-  id,
   name,
   href,
   icon: Icon,

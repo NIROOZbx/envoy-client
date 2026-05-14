@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Command, X, FileText, ArrowRight } from 'lucide-react';
+import { Search, FileText, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 export const DocsSearch: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ isOpen, onClose }) => {

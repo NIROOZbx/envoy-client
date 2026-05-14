@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
-import { CheckCircle2, XCircle, ArrowRight, RefreshCw } from 'lucide-react';
+import { CheckCircle2, XCircle, ArrowRight } from 'lucide-react';
 import { AuthFormShell } from '../components/AuthFormShell';
 import { useAuth } from '../hooks/useAuth';
 import { Spinner } from '../../../components/ui/spinner';

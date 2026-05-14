@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { CodeBlock, Callout } from '../components/DocsContent';
-import { cn } from '@/lib/utils';
+import { CodeBlock } from '../components/DocsContent';
+
 
 const Step = ({ number, title, children }: any) => (
   <div className="relative pl-12 pb-16 last:pb-0">
@@ -9,7 +8,7 @@ const Step = ({ number, title, children }: any) => (
       {number}
     </div>
     {/* Connector line */}
-    <div className="absolute left-4 top-8 bottom-0 w-[1px] bg-black/5 last:hidden" />
+    <div className="absolute left-4 top-8 bottom-0 `w-px` bg-black/5 last:hidden" />
     
     <h3 className="text-xl font-black tracking-tight mb-4 text-ui-text">{title}</h3>
     <div className="space-y-4">

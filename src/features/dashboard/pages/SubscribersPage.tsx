@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { UserPlus } from 'lucide-react';
 import { useSubscribers } from '../hooks/useSubscribers';
 import { SubscriberFilters } from '../components/subscribers/SubscriberFilters';
 import { SubscriberList } from '../components/subscribers/SubscriberList';

@@ -7,7 +7,6 @@ import { IntegrationSkeleton } from '@/components/ui';
 
 export const TemplateChannelsPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-  const { environmentId } = useOutletContext<{ environmentId: string | null }>();
 
   const { template, isLoading, error } = useTemplate(id ?? '');
 

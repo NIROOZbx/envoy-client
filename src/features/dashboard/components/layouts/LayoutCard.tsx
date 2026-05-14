@@ -18,8 +18,7 @@ export const LayoutCard: React.FC<LayoutCardProps> = ({
   createdAt, 
   isDefault, 
   onDelete, 
-  onSetDefault, 
-  isSettingDefault 
+  onSetDefault,  
 }) => {
   const actions: DropdownOption[] = [
     ...(!isDefault ? [{

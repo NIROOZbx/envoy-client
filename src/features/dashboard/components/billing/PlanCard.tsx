@@ -1,5 +1,5 @@
 import React from 'react';
-import { Check, Zap, Star, ShieldCheck, Users, Key, Database, Send, MessageSquare, Bell, Hash, MessageCircle, Globe, Layout } from 'lucide-react';
+import { Check, Send, MessageSquare, Bell, Hash, MessageCircle, Globe, Layout } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import type { BillingPlan } from '../../api/billing';
 import { Spinner } from '@/components/ui';

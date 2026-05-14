@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { format, startOfWeek, addDays, addHours, addWeeks, addMonths, isWithinInterval } from 'date-fns';
+import { format, startOfWeek, addDays, addHours, addMonths } from 'date-fns';
 import { ActivityBarCard } from './ActivityBarCard';
 
 interface ActivityWaveformProps {
@@ -55,7 +55,7 @@ export const ActivityWaveform: React.FC<ActivityWaveformProps> = ({ timeSeries, 
 
         const maxVal = Math.max(...timeSeries.map(ts => ts.sent_count + ts.delivered_count + ts.failed_count), 1);
 
-        return intervalPoints.map((date, i) => {
+        return intervalPoints.map((date, _) => {
             const label = format(date, labelFormat);
             const nextDate = 
                 params.group_by === 'hour' ? addHours(date, 1) :

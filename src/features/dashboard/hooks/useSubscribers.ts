@@ -1,5 +1,5 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { subscribersApi, type SubscriberPreference } from '../api/subscribers';
+import { subscribersApi } from '../api/subscribers';
 import { useAuthStore } from '@/store/authStore';
 import { toast } from 'sonner';
 

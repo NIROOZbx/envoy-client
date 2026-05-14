@@ -1,4 +1,4 @@
-import { Mail, MessageSquare, Bell, Globe, type LucideIcon } from 'lucide-react';
+import { Mail, MessageSquare,type LucideIcon } from 'lucide-react';
 
 export type ChannelType = 'email' | 'sms' | 'push' | 'in_app' | 'webhook';
 

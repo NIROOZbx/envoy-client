@@ -3,7 +3,6 @@ import { AnimatePresence } from 'framer-motion';
 import { Plus, Layers } from 'lucide-react';
 import { Modal, AlertDialog, Spinner } from '@/components/ui';
 import { useTemplateChannels } from '../../hooks/useTemplateChannels';
-import { CHANNEL_OPTIONS } from './channelConfig';
 import { ChannelRow } from './ChannelRow';
 import { ChannelForm } from './ChannelForm';
 import type { TemplateChannelResponse, UpdateTemplateChannelRequest } from '../../api/templateChannels';

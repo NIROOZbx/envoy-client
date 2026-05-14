@@ -3,12 +3,11 @@ import { AnalyticsHeroCard } from '../components/overview/AnalyticsHeroCard';
 import { PulseChartCard } from '../components/overview/PulseChartCard';
 import { DistributionDonutCard } from '../components/overview/DistributionDonutCard';
 import { Zap, ChevronDown, Calendar, Send, CheckCircle2, AlertCircle, XCircle } from 'lucide-react';
-import { subDays, subMonths, startOfDay, format, endOfDay } from 'date-fns';
+import { subDays,startOfDay} from 'date-fns';
 import { useAnalytics } from '../hooks/useAnalytics';
 import { ProviderUsageCard } from '../components/overview/ProviderUsageCard';
 import { ActivityWaveform } from '../components/overview/ActivityWaveform';
 import { ProviderHealthTable } from '../components/overview/ProviderHealthTable';
-import { cn } from '@/lib/utils';
 import { OverviewSkeleton } from '@/components/ui';
 
 const getDateRangeParams = (range: string) => {
@@ -79,7 +78,6 @@ export const DashboardOverviewPage: React.FC = () => {
     }
 
     const { aggregate, channels, providers, health, time_series } = analytics;
-    const mostUsedProviderCount = providers.find(p => p.name.toLowerCase() === aggregate.most_used_provider?.toLowerCase())?.count || 0;
 
     const donutData = Object.entries(channels).map(([label, count], idx) => ({
         label: label.toUpperCase(),

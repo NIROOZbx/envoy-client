@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useOutletContext } from 'react-router-dom';
 import { Plus, Search, Send, Trash2, MoreHorizontal } from 'lucide-react';
-import { cn, formatDate } from '@/lib/utils';
-import { Modal, Spinner, AlertDialog, Dropdown, type DropdownOption } from '@/components/ui';
+import {formatDate } from '@/lib/utils';
+import { Modal, AlertDialog, Dropdown, type DropdownOption } from '@/components/ui';
 import { useTemplates } from '../hooks/useTemplates';
 import { useLayouts } from '../hooks/useLayouts';
 
@@ -50,7 +50,6 @@ const TemplateCard = ({ id, name, type, status, lastUpdated, onDelete }: any) =>
 };
 
 export const WorkflowsPage: React.FC = () => {
-  const { environmentId } = useOutletContext<{ environmentId: string | null }>();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isDeleteDialogOpen, setIsDeleteDialogOpen] = useState(false);
   const [workflowToDelete, setWorkflowToDelete] = useState<string | null>(null);

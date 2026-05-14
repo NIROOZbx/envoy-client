@@ -6,7 +6,7 @@ import { Eye, EyeOff } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Dropdown } from './Dropdown';
 
-interface FormProps<T extends z.ZodType> {
+interface FormProps<T extends z.ZodType<any, any, any>> {
   schema: T;
   onSubmit: (data: z.infer<T>) => Promise<void> | void;
   children: React.ReactNode;
@@ -14,16 +14,16 @@ interface FormProps<T extends z.ZodType> {
   defaultValues?: any;
 }
 
-export function Form<T extends z.ZodType>({ schema, onSubmit, children, className, defaultValues }: FormProps<T>) {
-  const methods = useForm({
-    resolver: zodResolver(schema),
+export function Form<T extends z.ZodType<any, any, any>>({ schema, onSubmit, children, className, defaultValues }: FormProps<T>) {
+  const methods = useForm<z.infer<T>>({
+    resolver: zodResolver(schema) as any,
     mode: 'onTouched',
     defaultValues
   });
 
   return (
     <FormProvider {...methods}>
-      <form onSubmit={methods.handleSubmit(async (data) => await onSubmit(data))} className={className}>
+      <form onSubmit={methods.handleSubmit(onSubmit)} className={className}>
         {children}
       </form>
     </FormProvider>

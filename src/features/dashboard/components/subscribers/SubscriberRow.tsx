@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, Calendar, MoreHorizontal, Trash2, ShieldCheck, ShieldAlert, ChevronDown, ChevronRight, Settings } from 'lucide-react';
+import { Mail, Phone, Calendar, Trash2, ShieldCheck, ShieldAlert, ChevronDown } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
 import { AlertDialog } from '@/components/ui';
 import { type Subscriber } from '../../api/subscribers';

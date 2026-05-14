@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import { Send, Clock, Save, Trash2, ChevronLeft, Layout as LayoutIcon, Zap } from 'lucide-react';
+import { Send, Clock, Trash2, ChevronLeft, Layout as LayoutIcon, Zap } from 'lucide-react';
 import { cn, formatDate } from '@/lib/utils';
-import { Spinner, AlertDialog, Dropdown } from '@/components/ui';
+import {  AlertDialog, Dropdown } from '@/components/ui';
 import { useTemplate, useTemplates } from '../hooks/useTemplates';
 import { useLayouts } from '../hooks/useLayouts';
 
@@ -148,7 +148,7 @@ export const WorkflowDetailsPage: React.FC = () => {
                   name: template.name, 
                   description: template.description,
                   event_type: template.event_type,
-                  layout_id: template.layout_id,
+                  layout_id: template.layout_id ?? undefined,
                   status: template.status as any
                 }}
                 onSave={handleUpdate}

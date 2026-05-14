@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { ArrowRight, HelpCircle, Send, MessageSquare, Bell, Globe, Activity, Hash, MessageCircle, Layout, TrendingUp, Receipt, Crown, Users, Wallet, Key } from 'lucide-react';
+import {  Send, MessageSquare, Activity,Users, Key } from 'lucide-react';
 import { useBilling } from '../../hooks/useBilling';
 import { PlanCard } from './PlanCard';
-import { Spinner, AlertDialog } from '@/components/ui';
+import {AlertDialog } from '@/components/ui';
 import { UsageCard } from './UsageCard';
 import { BillingSkeleton } from '@/components/ui';
 
@@ -54,18 +54,7 @@ export const BillingManager: React.FC = () => {
 
   const currentPlan = plans.find(p => p.id === subscription?.ID || p.name === subscription?.PlanName);
 
-  const getLimitForChannel = (name: string) => {
-    if (!currentPlan) return 0;
-    const n = name.toLowerCase();
-    if (n.includes('email')) return currentPlan.email_limit;
-    if (n.includes('sms')) return currentPlan.sms_limit;
-    if (n.includes('push')) return currentPlan.push_limit;
-    if (n.includes('slack')) return currentPlan.slack_limit;
-    if (n.includes('whatsapp')) return currentPlan.whatsapp_limit;
-    if (n.includes('webhook')) return currentPlan.webhook_limit;
-    if (n.includes('in_app')) return currentPlan.in_app_limit;
-    return 0;
-  };
+
 
   const isFree = subscription?.PlanName?.toLowerCase() === 'free';
   const emailUsage = usage?.usage.find(u => u.channel_name.toLowerCase().includes('email')) || { channel_name: 'Email', current_usage: 0 };

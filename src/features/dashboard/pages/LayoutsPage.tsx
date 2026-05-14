@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useOutletContext } from 'react-router-dom';
 import { Plus, Search, Layout as LayoutIcon } from 'lucide-react';
-import { Modal, Spinner, AlertDialog } from '@/components/ui';
+import { Modal, AlertDialog } from '@/components/ui';
 import { useLayouts } from '../hooks/useLayouts';
 
 // Modular Components
@@ -10,7 +10,6 @@ import { LayoutForm } from '../components/layouts/LayoutForm';
 import { HeaderSkeleton, SearchBarSkeleton, CardGridSkeleton } from '@/components/ui';
 
 export const LayoutsPage: React.FC = () => {
-  const { environmentId } = useOutletContext<{ environmentId: string | null }>();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isDeleteDialogOpen, setIsDeleteDialogOpen] = useState(false);
   const [layoutToDelete, setLayoutToDelete] = useState<string | null>(null);

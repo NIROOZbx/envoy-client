@@ -1,23 +1,3 @@
-import { 
-  Book, 
-  Terminal, 
-  Layers, 
-  Cpu, 
-  Key, 
-  Shield, 
-  Globe, 
-  Users, 
-  Bell, 
-  Mail, 
-  MessageSquare, 
-  Webhook, 
-  Cloud, 
-  Zap, 
-  Clock, 
-  RotateCw,
-  Box,
-  Server
-} from 'lucide-react';
 
 export interface NavItem {
   title: string;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {  Search, Command, ArrowRight, Sun, Moon } from 'lucide-react';
+import {  Search, Command, ArrowRight, Sun } from 'lucide-react';
 
 export const DocsNavbar: React.FC<{ onSearchOpen: () => void }> = ({ onSearchOpen }) => {
   return (

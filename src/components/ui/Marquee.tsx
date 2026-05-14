@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MessageSquare, Braces, Layers, Bell, Webhook, CreditCard, AlertTriangle, RefreshCw, Zap, Shield, Clock, Users } from 'lucide-react';
+import { Mail, MessageSquare, Bell, Webhook, CreditCard, AlertTriangle, RefreshCw, Zap, Shield, Clock, Users } from 'lucide-react';
 
 interface MarqueeProps {
   children: React.ReactNode;

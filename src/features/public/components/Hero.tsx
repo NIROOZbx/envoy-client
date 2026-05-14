@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Zap, ChevronRight } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { PipelineMarquee } from '../../../components/ui/Marquee';
 
@@ -60,9 +60,9 @@ export const Hero: React.FC = () => {
 
         <div className="w-full mt-12">
           <div className="flex items-center gap-4 mb-6">
-            <div className="h-[1px] flex-1 bg-ui-border" />
+            <div className="`h-px` flex-1 bg-ui-border" />
             <span className="text-[10px] font-black uppercase tracking-[0.3em] text-ui-muted">Enterprise Grade Reliability</span>
-            <div className="h-[1px] flex-1 bg-ui-border" />
+            <div className="`h-px` flex-1 bg-ui-border" />
           </div>
           <PipelineMarquee />
         </div>

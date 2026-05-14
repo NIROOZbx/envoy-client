@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Globe, ShieldCheck, Star } from 'lucide-react';
-import { Modal, AlertDialog, Spinner } from '@/components/ui';
+import { Globe, ShieldCheck } from 'lucide-react';
+import { Modal, AlertDialog } from '@/components/ui';
 import { useChannelConfigs } from '../../hooks/useChannelConfigs';
 import { IntegrationRow } from './IntegrationRow';
 import { IntegrationForm } from './IntegrationForm';
