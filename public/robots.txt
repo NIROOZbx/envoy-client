@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /dashboard/
+Disallow: /create-workspace/
+Disallow: /billing/
+
+Sitemap: https://envoy.io/sitemap.xml

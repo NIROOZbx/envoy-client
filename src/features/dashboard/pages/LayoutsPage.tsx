@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useOutletContext } from 'react-router-dom';
 import { Plus, Search, Layout as LayoutIcon } from 'lucide-react';
 import { Modal, AlertDialog } from '@/components/ui';
 import { useLayouts } from '../hooks/useLayouts';

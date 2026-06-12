@@ -47,7 +47,7 @@ export const Footer: React.FC = () => {
             <Share2 size={16} className="hover:text-black cursor-pointer transition-colors" />
             
             {/* Using the public GitHub SVG */}
-            <Link to="https://github.com/envoy" target="_blank">
+            <Link to="https://github.com/NIROOZbx/notification-engine" target="_blank">
               <img src="/github.svg" alt="GitHub" className="w-4 h-4 opacity-20 hover:opacity-100 transition-opacity" />
             </Link>
 

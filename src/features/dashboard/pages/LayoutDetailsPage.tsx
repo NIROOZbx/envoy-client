@@ -6,6 +6,7 @@ import { formatDate } from '@/lib/utils';
 import { useLayout, useLayouts } from '../hooks/useLayouts';
 import { LayoutForm } from '../components/layouts/LayoutForm';
 import { LayoutMetadataCard } from '../components/layouts/LayoutMetadataCard';
+import { IntegrationCard } from '../components/workflows/IntegrationCard';
 
 export const LayoutDetailsPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -153,18 +154,12 @@ export const LayoutDetailsPage: React.FC = () => {
             icon={Clock}
           />
           
-          <div className="bg-black text-white rounded-lg p-8 shadow-lg overflow-hidden relative group">
-            <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
-              <LayoutIcon className="w-24 h-24 rotate-12" />
-            </div>
-            <h4 className="text-base font-black uppercase tracking-tight mb-4 relative z-10">Pro Tip</h4>
-            <p className="text-[11px] font-medium leading-relaxed text-pearl opacity-60 relative z-10">
-              Our delivery engine automatically inlines CSS for maximum email compatibility. Use standard classes for layout styling.
-            </p>
-            <button className="mt-8 text-[9px] font-black uppercase tracking-[0.2em] underline underline-offset-4 relative z-10">
-              View Guidelines
-            </button>
-          </div>
+          <IntegrationCard
+            bannerLabel="Pro Tip"
+            title="Layout Tips"
+            description="Preview your layout on desktop, tablet, and mobile simultaneously using the responsive preview mode to ensure pixel-perfect rendering at every breakpoint."
+            buttonLabel="View Guidelines"
+          />
         </div>
       </div>
     </div>
