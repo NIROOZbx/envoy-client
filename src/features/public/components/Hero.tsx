@@ -2,11 +2,36 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { PipelineMarquee } from '../../../components/ui/Marquee';
 
 export const Hero: React.FC = () => {
   return (
     <section className="relative pt-32 lg:pt-48 pb-20 lg:pb-32 px-6 overflow-hidden">
+             {/* Background Glow: Blurred Ellipse Stacking */}
+      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+        <svg
+          className="w-full h-full"
+          viewBox="0 0 1440 1024"
+          preserveAspectRatio="none"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <filter id="ellipse-glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="50" />
+            </filter>
+          </defs>
+          {/* Layer 1: Pale Ivory (Wide Base) */}
+          <ellipse cx="720" cy="1024" rx="1440" ry="450" fill="#FAF3E1" filter="url(#ellipse-glow)" />
+          {/* Layer 2: Warm Cream */}
+          <ellipse cx="720" cy="1024" rx="1200" ry="350" fill="#F5E7C6" filter="url(#ellipse-glow)" />
+          {/* Layer 3: Saturated Orange */}
+          <ellipse cx="720" cy="1024" rx="950" ry="250" fill="#FA8112" filter="url(#ellipse-glow)" />
+          {/* Layer 4: Dark Charcoal Core */}
+          <ellipse cx="720" cy="1024" rx="700" ry="130" fill="#1A1208" filter="url(#ellipse-glow)" />
+        </svg>
+      </div>
+
+ 
       <div className="max-w-6xl mx-auto flex flex-col items-center text-center relative z-10">
 
         <motion.h1
@@ -41,7 +66,7 @@ export const Hero: React.FC = () => {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.3 }}
-          className="flex flex-col sm:flex-row items-center gap-4 mb-12"
+          className="flex flex-col sm:flex-row items-center gap-4"
         >
           <Link
             to="/register"
@@ -57,15 +82,6 @@ export const Hero: React.FC = () => {
             API Documentation
           </Link>
         </motion.div>
-
-        <div className="w-full mt-12">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="`h-px` flex-1 bg-ui-border" />
-            <span className="text-[10px] font-black uppercase tracking-[0.3em] text-ui-muted">Enterprise Grade Reliability</span>
-            <div className="`h-px` flex-1 bg-ui-border" />
-          </div>
-          <PipelineMarquee />
-        </div>
       </div>
     </section>
   );
