@@ -26,7 +26,7 @@ export const BillingPage: React.FC = () => {
       {/* Header */}
       <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-10">
         <div className="flex items-end gap-6">
-          <h1 className="text-4xl sm:text-7xl font-black tracking-tighter uppercase text-ui-text leading-[0.8]">Billing</h1>
+          <h1 className="text-3xl sm:text-5xl font-black tracking-tighter uppercase text-ui-text leading-[0.8]">Billing</h1>
           
           <div className="flex flex-col gap-2 pb-1.5 translate-y-1">
             {subscription && (

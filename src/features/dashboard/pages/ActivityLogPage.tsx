@@ -50,7 +50,7 @@ export const ActivityLogPage: React.FC = () => {
             {/* Header */}
             <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-10">
                 <div className="flex items-end gap-6">
-                    <h1 className="text-4xl sm:text-7xl font-black tracking-tighter uppercase text-ui-text leading-[0.8]">Logs</h1>
+                    <h1 className="text-3xl sm:text-5xl font-black tracking-tighter uppercase text-ui-text leading-[0.8]">Logs</h1>
                     <div className="flex flex-col gap-2 pb-1.5 translate-y-1">
                         <div className="flex-col items-center gap-3 ">
                             <span className="text-[11px] font-black uppercase tracking-[0.2em] text-ui-text">Real-time Stream</span>

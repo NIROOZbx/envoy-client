@@ -27,7 +27,7 @@ export const SubscribersPage: React.FC = () => {
     <div className="max-w-7xl mx-auto pb-20">
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
         <div className="flex items-end gap-6">
-          <h1 className="text-4xl sm:text-7xl font-black tracking-tighter uppercase text-ui-text leading-[0.8]">Subscribers</h1>
+          <h1 className="text-3xl sm:text-5xl font-black tracking-tighter uppercase text-ui-text leading-[0.8]">Subscribers</h1>
         </div>
         
         <div className="flex items-end gap-6">
