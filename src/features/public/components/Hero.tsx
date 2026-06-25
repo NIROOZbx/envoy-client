@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative pt-32 lg:pt-48 pb-20 lg:pb-32 px-6 overflow-hidden">
+    <section className="relative min-h-[calc(100vh-5rem)] flex flex-col justify-center items-center py-20 px-6 overflow-hidden">
              {/* Background Glow: Blurred Ellipse Stacking */}
       <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
         <svg
