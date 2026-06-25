@@ -26,10 +26,10 @@ const BentoCard: React.FC<BentoCardProps> = ({ title, description, className, ch
     )}
   >
     <div className="relative z-20">
-      <h3 className="text-2xl font-satoshi-bold tracking-tight text-black leading-tight mb-2">
+      <h3 className="text-2xl font-bold tracking-tight text-black leading-tight mb-2">
         {title}
       </h3>
-      <p className="text-[15px] font-satoshi-medium text-(--black-40) leading-relaxed max-w-[320px]">
+      <p className="text-[15px] font-medium text-(--black-40) leading-relaxed max-w-[320px]">
         {description}
       </p>
     </div>

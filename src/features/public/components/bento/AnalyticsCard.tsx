@@ -27,10 +27,10 @@ export const AnalyticsCard: React.FC = () => {
                                 <div className="w-6 h-6 rounded-full bg-[#673AB7]/10 flex items-center justify-center">
                                     <div className="w-2 h-2 rounded-full bg-[#673AB7]" />
                                 </div>
-                                <span className="text-[8px] font-satoshi-bold uppercase tracking-widest text-black/40">Sent</span>
+                                <span className="text-[8px] font-bold uppercase tracking-widest text-black/40">Sent</span>
                             </div>
-                            <div className="text-sm font-satoshi-black text-black">Delivered</div>
-                            <div className=" text-[8px] font-satoshi-medium text-black/30">Just now • Email</div>
+                            <div className="text-sm font-black text-black">Delivered</div>
+                            <div className=" text-[8px] font-medium text-black/30">Just now • Email</div>
                         </div>
                     </motion.div>
 
@@ -42,10 +42,10 @@ export const AnalyticsCard: React.FC = () => {
                     >
                         <div className="bg-white/95 backdrop-blur-md rounded-xl p-3.5 shadow-2xl border border-black/5 w-[150px]">
                             <div className="flex justify-between items-start mb-0.5">
-                                <span className="text-[8px] font-satoshi-bold uppercase tracking-widest text-black/40">Total</span>
-                                <span className="text-[8px] font-satoshi-black text-green-500">+99%</span>
+                                <span className="text-[8px] font-bold uppercase tracking-widest text-black/40">Total</span>
+                                <span className="text-[8px] font-black text-green-500">+99%</span>
                             </div>
-                            <div className="text-xl font-satoshi-black text-black tracking-tight">17,234</div>
+                            <div className="text-xl font-black text-black tracking-tight">17,234</div>
                             <div className="mt-2 flex gap-0.5">
                                 {[1, 2, 3, 4].map(i => (
                                     <div key={i} className="h-0.5 flex-1 bg-black rounded-full opacity-[0.05]" />

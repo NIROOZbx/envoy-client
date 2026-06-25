@@ -38,7 +38,7 @@ export const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="text-[42px] sm:text-6xl lg:text-9xl font-satoshi-bold tracking-tight text-black leading-[0.95] sm:leading-[0.85] mb-8"
+          className="text-[42px] sm:text-6xl lg:text-9xl font-bold tracking-tight text-black leading-[0.95] sm:leading-[0.85] mb-8"
         >
           Notifications That <br className="hidden sm:block" />
           <span className="inline-flex items-center gap-2 lg:gap-3 align-middle">
@@ -70,14 +70,14 @@ export const Hero: React.FC = () => {
         >
           <Link
             to="/register"
-            className="group h-14 sm:h-16 px-6 sm:px-10 bg-black text-white rounded-2xl font-satoshi-bold text-xs sm:text-sm uppercase tracking-widest flex items-center gap-3 hover:bg-black-hover transition-colors shadow-2xl shadow-black/20"
+            className="group h-14 sm:h-16 px-6 sm:px-10 bg-black text-white rounded-2xl font-bold text-xs sm:text-sm uppercase tracking-widest flex items-center gap-3 hover:bg-black-hover transition-colors shadow-2xl shadow-black/20"
           >
             Start Shipping
             <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
           </Link>
           <Link
             to="/docs"
-            className="h-14 sm:h-16 px-6 sm:px-10 border border-ui-border text-black rounded-2xl font-satoshi-bold text-xs sm:text-sm uppercase tracking-widest flex items-center hover:bg-black/5 transition-all"
+            className="h-14 sm:h-16 px-6 sm:px-10 border border-ui-border text-black rounded-2xl font-bold text-xs sm:text-sm uppercase tracking-widest flex items-center hover:bg-black/5 transition-all"
           >
             API Documentation
           </Link>

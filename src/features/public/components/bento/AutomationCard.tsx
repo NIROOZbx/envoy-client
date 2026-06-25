@@ -30,7 +30,7 @@ export const AutomationCard: React.FC = () => {
          <div className="flex flex-col items-center gap-2 bg-white border border-black/5 rounded-full px-5 py-2.5 shadow-sm">
             <div className="flex items-center gap-2">
                <img src="/timer.svg" className="w-4 h-4" alt="" />
-               <span className="text-[11px] font-satoshi-bold uppercase tracking-widest text-black">Save Time</span>
+               <span className="text-[11px] font-bold uppercase tracking-widest text-black">Save Time</span>
             </div>
          </div>
 
@@ -38,7 +38,7 @@ export const AutomationCard: React.FC = () => {
          <div className="flex flex-col items-center gap-2 bg-white border border-black/5 rounded-full px-5 py-2.5 shadow-sm">
             <div className="flex items-center gap-2">
                <img src="/Scan.png" className="w-4 h-4 object-contain" alt="" />
-               <span className="text-[11px] font-satoshi-bold uppercase tracking-widest text-black">Stay Focused</span>
+               <span className="text-[11px] font-bold uppercase tracking-widest text-black">Stay Focused</span>
             </div>
          </div>
       </div>
@@ -47,7 +47,7 @@ export const AutomationCard: React.FC = () => {
       <div className="relative z-10 bg-white border border-black/5 rounded-full px-6 py-3 shadow-sm mt-20">
         <div className="flex items-center gap-3">
           <img src="/noun-easy-4676087.svg" className="w-5 h-5" alt="" />
-          <span className="text-[12px] font-satoshi-bold uppercase tracking-[0.1em] text-black">One Click</span>
+          <span className="text-[12px] font-bold uppercase tracking-[0.1em] text-black">One Click</span>
         </div>
       </div>
     </div>
