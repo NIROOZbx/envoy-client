@@ -47,19 +47,19 @@ export const ActivityLogPage: React.FC = () => {
 
     return (
         <div className="max-w-full pb-32">
-            {/* Header */}
             <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-10">
                 <div className="flex items-end gap-6">
                     <h1 className="text-3xl sm:text-5xl font-black tracking-tighter uppercase text-ui-text leading-[0.8]">Logs</h1>
                     <div className="flex flex-col gap-2 pb-1.5 translate-y-1">
-                        <div className="flex-col items-center gap-3 ">
-                            <span className="text-[11px] font-black uppercase tracking-[0.2em] text-ui-text">Real-time Stream</span>
-                            <p className="text-ui-muted font-bold tracking-tight opacity-60 text-xs max-w-sm lg:text-right pb-1.5">
-                                Architectural trace of every notification pulse across your infrastructure.
-                            </p>
+                        <div className="flex items-center gap-2 px-3 py-1 bg-ui-text/5 border border-ui-border rounded-md">
+                            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-ui-text">Real-time Stream</span>
                         </div>
                     </div>
                 </div>
+                
+                <p className="text-ui-muted font-bold tracking-tight opacity-60 text-xs max-w-sm lg:text-right pb-1.5">
+                    Architectural trace of every notification pulse across your infrastructure.
+                </p>
             </div>
 
             <LogFilters
