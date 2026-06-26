@@ -98,11 +98,18 @@ export const useAuth = () => {
     }
   }, [navigate]);
 
-  const handleCreateWorkspace = React.useCallback(async (data: { workspace_name: string; plan_name: string }) => {
+  const handleCreateWorkspace = React.useCallback(async (data: { workspace_name: string; plan_name: string }, skipNavigate = false) => {
     setIsLoading(true);
     setError(null);
     try {
       const response = await createWorkspaceApi(data);
+      
+      if (response && response.success === false) {
+        const errMsg = (response as any).error || response.message || 'Failed to create workspace.';
+        setError(errMsg);
+        return { success: false, error: errMsg };
+      }
+
       const workspaceData = response?.data?.workspace;
       const userData = response?.data?.user;
 
@@ -123,9 +130,14 @@ export const useAuth = () => {
         );
       }
       
-      navigate('/dashboard');
+      if (!skipNavigate) {
+        navigate('/dashboard');
+      }
+      return { success: true, data: response?.data };
     } catch (err: any) {
-      setError(err.response?.data?.error || 'Failed to create workspace.');
+      const errMsg = err.response?.data?.error || 'Failed to create workspace.';
+      setError(errMsg);
+      return { success: false, error: errMsg };
     } finally {
       setIsLoading(false);
     }

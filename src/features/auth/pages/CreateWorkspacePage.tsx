@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { z } from 'zod';
-import { Form, FormField } from '../../../components/ui';
+import { Form, FormField, Spinner } from '../../../components/ui';
 import { AuthFormShell } from '../components/AuthFormShell';
 import { useAuth } from '../hooks/useAuth';
 import { OnboardingLoader } from '@/features/dashboard/components/onboarding/OnboardingLoader';
@@ -13,23 +14,22 @@ export const CreateWorkspacePage: React.FC = () => {
   const { handleCreateWorkspace, error } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showLoader, setShowLoader] = useState(false);
-  const [formData, setFormData] = useState<{ workspace_name: string } | null>(null);
+  const navigate = useNavigate();
 
   const onSubmit = async (data: { workspace_name: string }) => {
-    setFormData(data);
-    setShowLoader(true);
-  };
-
-  const onLoaderComplete = async () => {
-    if (!formData) return;
     setIsSubmitting(true);
-    try {
-      // Default to "free" plan on initial onboarding
-      await handleCreateWorkspace({ ...formData, plan_name: 'free' });
-    } catch (err) {
-      setShowLoader(false);
+    // Call the backend first. Default to "free" plan on initial onboarding
+    const result = await handleCreateWorkspace({ ...data, plan_name: 'free' }, true);
+    
+    if (result && result.success) {
+      setShowLoader(true);
+    } else {
       setIsSubmitting(false);
     }
+  };
+
+  const onLoaderComplete = () => {
+    navigate('/dashboard');
   };
 
   if (showLoader) {
@@ -58,7 +58,14 @@ export const CreateWorkspacePage: React.FC = () => {
           disabled={isSubmitting}
           className="w-full h-12 bg-ui-text text-ui-bg rounded-xl font-bold text-[14px] hover:opacity-90 active:scale-[0.98] transition-all mt-6 flex items-center justify-center gap-2 shadow-xl shadow-ui-text/10 disabled:opacity-70"
         >
-          Create Workspace
+          {isSubmitting ? (
+            <>
+              <Spinner className="w-4 h-4 text-ui-bg" />
+              Creating...
+            </>
+          ) : (
+            'Create Workspace'
+          )}
         </button>
       </Form>
     </AuthFormShell>
