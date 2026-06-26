@@ -36,7 +36,14 @@ export const useAuth = () => {
       }
     } catch (err: any) {
       console.error('Failed to fetch user details', err);
-      if (err.response?.status === 401) {
+      if (err.response?.status === 403 && err.response?.data?.error === 'workspace setup required') {
+        setAuth({
+          id: '',
+          email: '',
+          fullName: 'User',
+          hasWorkspace: false,
+        });
+      } else if (err.response?.status === 401) {
         toast.error('Session expired. Please login again.');
         logout();
       }
