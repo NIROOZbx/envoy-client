@@ -4,7 +4,7 @@ import { useAuthStore } from '../../store/authStore';
 import { useAuth } from '../../features/auth/hooks/useAuth';
 
 export const ProtectedRoute: React.FC = () => {
-    const { isAuthenticated, isLoading: isGlobalLoading } = useAuthStore();
+    const { isAuthenticated, isLoading: isGlobalLoading, user } = useAuthStore();
     const { getMe } = useAuth();
     const [isChecking, setIsChecking] = useState(true);
 
@@ -28,7 +28,7 @@ export const ProtectedRoute: React.FC = () => {
         return <Navigate to="/login" replace />;
     }
 
-    const hasWorkspace = useAuthStore.getState().user?.hasWorkspace;
+    const hasWorkspace = user?.hasWorkspace;
     const isCreatingWorkspace = window.location.pathname === '/create-workspace';
 
     if (!hasWorkspace && !isCreatingWorkspace) {

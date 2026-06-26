@@ -21,11 +21,11 @@ export const useAuth = () => {
         const { user: userData, workspace } = response.data;
 
         setAuth({
-          id: userData.UserID,
-          email: userData.Email,
-          fullName: userData.Name,
-          hasWorkspace: userData.hasWorkspace || !!workspace,
-          workspaceName: workspace?.WorkSpaceName
+          id: userData.UserID || userData.userID,
+          email: userData.Email || userData.email,
+          fullName: userData.Name || userData.name,
+          hasWorkspace: !!userData.hasWorkspace || !!userData.HasWorkspace || !!workspace,
+          workspaceName: workspace?.WorkSpaceName || workspace?.workspaceName
         });
 
         if (workspace?.environments?.length) {
@@ -54,12 +54,13 @@ export const useAuth = () => {
       const workspace = response?.data?.workspace;
 
       if (userData) {
+        const hasWorkspace = !!userData.hasWorkspace || !!userData.HasWorkspace || !!workspace;
         setAuth({
-          id: userData.UserID,
-          email: userData.Email,
-          fullName: userData.Name,
-          hasWorkspace: !!userData.hasWorkspace || !!workspace,
-          workspaceName: workspace?.WorkSpaceName
+          id: userData.UserID || userData.userID,
+          email: userData.Email || userData.email,
+          fullName: userData.Name || userData.name,
+          hasWorkspace,
+          workspaceName: workspace?.WorkSpaceName || workspace?.workspaceName
         });
 
         if (workspace?.environments?.length) {
@@ -68,7 +69,7 @@ export const useAuth = () => {
           );
         }
 
-        if (!userData.hasWorkspace && !workspace) {
+        if (!hasWorkspace) {
           navigate('/create-workspace');
         } else {
           navigate('/dashboard');
@@ -110,16 +111,16 @@ export const useAuth = () => {
         return { success: false, error: errMsg };
       }
 
-      const workspaceData = response?.data?.workspace;
-      const userData = response?.data?.user;
+      const workspaceData = response?.data?.workspace as any;
+      const userData = response?.data?.user as any;
 
       if (userData) {
         setAuth({
-          id: userData.UserID,
-          email: userData.Email,
-          fullName: userData.Name,
+          id: userData.UserID || userData.userID,
+          email: userData.Email || userData.email,
+          fullName: userData.Name || userData.name,
           hasWorkspace: true,
-          workspaceName: workspaceData?.WorkSpaceName,
+          workspaceName: workspaceData?.WorkSpaceName || workspaceData?.workspaceName,
           isVerified: true
         });
       }
@@ -152,13 +153,14 @@ export const useAuth = () => {
       const workspace = response?.data?.workspace;
 
       if (userData) {
+        const hasWorkspace = !!userData.hasWorkspace || !!userData.HasWorkspace || !!workspace;
         setAuth({
-          id: userData.UserID,
-          email: userData.Email,
-          fullName: userData.Name,
-          hasWorkspace: !!userData.hasWorkspace || !!workspace,
-          workspaceName: workspace?.WorkSpaceName,
-          isVerified: userData.IsVerified
+          id: userData.UserID || userData.userID,
+          email: userData.Email || userData.email,
+          fullName: userData.Name || userData.name,
+          hasWorkspace,
+          workspaceName: workspace?.WorkSpaceName || workspace?.workspaceName,
+          isVerified: userData.IsVerified || userData.isVerified
         });
 
         if (workspace?.environments?.length) {
@@ -168,7 +170,7 @@ export const useAuth = () => {
         }
 
         if (navigateOnSuccess) {
-          if (!userData.hasWorkspace && !workspace) {
+          if (!hasWorkspace) {
             navigate('/create-workspace');
           } else {
             navigate('/dashboard');

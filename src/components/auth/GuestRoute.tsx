@@ -3,7 +3,7 @@ import { Navigate, Outlet } from 'react-router-dom';
 import { useAuthStore } from '../../store/authStore';
 
 export const GuestRoute: React.FC = () => {
-  const { isAuthenticated, isLoading } = useAuthStore();
+  const { isAuthenticated, isLoading, user } = useAuthStore();
 
   if (isLoading) {
     return (
@@ -14,7 +14,7 @@ export const GuestRoute: React.FC = () => {
   }
 
   if (isAuthenticated) {
-    const hasWorkspace = useAuthStore.getState().user?.hasWorkspace;
+    const hasWorkspace = user?.hasWorkspace;
     return <Navigate to={hasWorkspace ? "/dashboard" : "/create-workspace"} replace />;
   }
 
