@@ -7,7 +7,7 @@ import { Growth } from '../components/Growth';
 
 export const LandingPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-pearl selection:bg-black selection:text-pearl overflow-x-hidden">
+    <div className="min-h-screen bg-pearl selection:bg-black selection:text-pearl">
       <Hero />
       <HeroMarquee />
       <Integrations />

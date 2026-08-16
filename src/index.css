@@ -290,6 +290,7 @@
     body {
         @apply bg-background text-foreground;
         font-family: var(--font-sans);
+        overflow-x: hidden;
         -ms-overflow-style: none;
         /* IE and Edge */
         scrollbar-width: none;
@@ -303,6 +304,7 @@
 
     html {
         @apply font-sans antialiased;
+        overflow-x: hidden;
         -ms-overflow-style: none;
         scrollbar-width: none;
     }
